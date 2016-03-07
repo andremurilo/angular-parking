@@ -1,0 +1,42 @@
+<div class="card">
+	<div class="row">
+		<div class="col l12 s12 center-align">
+			<h3>Clientes</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col s12 l12">
+			<div class="col s12 l12">
+				<table class="hoverable centered responsive-table">
+					<thead>
+						<tr>
+							<th data-field="foto"></th>
+							<th data-field="id">Nome</th>
+							<th data-field="name">Telefone</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="cliente in clientes">
+							<td><img src="{{cliente.caminho}}" class="circle" style="width:30%"></td>
+							<td>{{cliente.nome | camel}}</td>
+							<td>{{cliente.telefone}}</td>
+							<td class="">
+								<a class="tooltipped" data-position="top" data-delay="500" data-tooltip="Alterar" href="">
+									<i class="small material-icons grey-text text-darken-3">loop</i>
+								</a>
+							</td>
+							<td>
+								<a class="tooltipped" data-position="top" data-delay="500" data-tooltip="Excluir" href="" ng-click="excluiCliente(cliente.id)">
+									<i class="small material-icons grey-text text-darken-3">delete</i>
+								</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="fixed-action-btn" style="bottom: 25px; right: 45px">
+		<a href="#/clientes/cadastro" class="right btn-floating btn-large white-text light-blue darken-3" style="margin: 10px 10px"><i class="material-icons right">add</i></a>
+	</div>
+</div>

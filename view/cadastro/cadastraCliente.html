@@ -1,0 +1,66 @@
+<div class="card">
+	<form name="clienteForm" id='form1' enctype="multipart/form-data">
+		<input type="hidden" name="txtid" value="<?=$id?>">
+		<div class="row">
+			<div class="col l12">
+				<div class="col l6 s12">
+					<div class="col l3 s6 push-s3">
+						
+					</div>
+				</div>
+				<div class="file-field input-field col l6 s12">
+					<div class="btn light-blue darken-3">
+						<span>Imagem</span>
+						<input type="file" name='file' ng-model="cliente.file" ngf-select ngf-accept="'image/*'" ngf-pattern="'image/*'" ngf-max-size="20MB">
+					</div>
+					<div class="file-path-wrapper">
+						<input class="file-path validate" type="text">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col l12">
+				<div class="input-field col l4 s12">
+					<input id="nome" type="text" class="validate" name="txtnome" value="" ng-model="cliente.nome">
+					<label for="nome">Nome</label>
+				</div>
+				<div class="input-field col l4 s12">
+					<input id="telefone" type="text" class="validate" name="txttelefone" value="" ng-model="cliente.telefone">
+					<label for="telefone">Telefone</label>
+				</div>
+				<div class="input-field col l4 s12">
+					<input id="sexo" type="text" class="validate" name="txtsexo" value="" ng-model="cliente.sexo">
+					<label for="sexo">Sexo</label>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col l12 s12">
+				<div class="input-field col l12 s12">
+					<input id="endereco" type="text" class="validate" name="txtendereco" value="" ng-model="cliente.endereco">
+					<label for="endereco">Endereco</label>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col l12">
+				<div class="input-field col l6 s12">
+					<input id="email" type="email" class="validate" name="txtemail" value="" ng-model="cliente.email">
+					<label for="email">Email</label>
+				</div>
+				<div class="input-field col l6 s12">
+					<input id="senha" type="password" class="validate" name="txtsenha" value="" ng-model="cliente.senha">
+					<label for="senha">Senha</label>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col l12 m12 s12">
+				<div class="col l12 s12">
+					<button class="btn white-text right light-blue darken-3" type="submit" name="action" ng-click="cadastraCliente(cliente)" style="margin: 10px 10px">Salvar <i class="material-icons right">save</i> </button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
